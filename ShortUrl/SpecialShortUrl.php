@@ -43,6 +43,8 @@ class SpecialShortUrl extends SpecialPage {
             return;
         }
 
-        $wgOut->addHTML($id . ' not found');
+		// Wrong ID
+		$notfound = wfMsg ( 'shorturl-not-found', $id );
+        $wgOut->addHTML( $notfound );
 	}
 }

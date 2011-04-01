@@ -17,5 +17,6 @@ $messages = array();
 $messages['en'] = array(
 	'shorturl' => 'Short Url',
 	'shorturl-desc' => '[[Special:ShortUrl|Short Url for redirects]]',
+	'shorturl-not-found' => 'Sorry, the URL you are looking for is not found (No article with ID $1 exists'
 );
 
