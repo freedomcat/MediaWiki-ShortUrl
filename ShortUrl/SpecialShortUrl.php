@@ -7,13 +7,15 @@
  * @ingroup Extensions
  * @author Yuvi Panda, http://yuvi.in
  * @copyright © 2011 Yuvaraj Pandian (yuvipanda@yuvi.in)
- * @licence GNU General Public Licence 2.0
+ * @licence Modified BSD License
  */
 
 if( !defined( 'MEDIAWIKI' ) ) {
 	echo( "not a valid entry point.\n" );
 	die( 1 );
 }
+
+require_once "ShortUrl.functions.php";
 
 /**
  * Provides the contact form
@@ -36,15 +38,14 @@ class SpecialShortUrl extends SpecialPage {
 	public function execute( $par ) {
         global $wgOut, $wgRequest;
         
-        $id = base_convert ( $par, 36, 10 );
+        $id = shorturlDecode( $par );
         $title = Title::newFromID( $id );
         if ( $title ) {
             $wgOut->redirect( $title->getFullURL(), '301' );
             return;
         }
-
 		// Wrong ID
 		$notfound = wfMsg ( 'shorturl-not-found', $id );
-        $wgOut->addHTML( $notfound );
+		$wgOut->addHTML( $notfound );
 	}
 }

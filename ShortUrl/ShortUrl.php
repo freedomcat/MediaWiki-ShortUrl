@@ -7,7 +7,7 @@
  * @ingroup Extensions
  * @author Yuvi Panda, http://yuvi.in
  * @copyright © 2011 Yuvaraj Pandian (yuvipanda@yuvi.in)
- * @licence GNU General Public Licence 2.0
+ * @licence Modified BSD License
  */
 
 if( !defined( 'MEDIAWIKI' ) ) {

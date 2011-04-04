@@ -6,7 +6,7 @@
  * @ingroup Extensions
  * @author Yuvi Panda, yuvi.in
  * @copyright © Yuvaraj Pandian <yuvipanda@yuvi.in>
- * @license GNU General Public Licence 2.0 
+ * @license Modified BSD License 
  */
 
 $messages = array();
@@ -17,6 +17,6 @@ $messages = array();
 $messages['en'] = array(
 	'shorturl' => 'Short Url',
 	'shorturl-desc' => '[[Special:ShortUrl|Short Url for redirects]]',
-	'shorturl-not-found' => 'Sorry, the URL you are looking for is not found (No article with ID $1 exists'
+	'shorturl-not-found' => 'Sorry, the URL you are looking for is not found (No article with ID $1 exists)'
 );
 
