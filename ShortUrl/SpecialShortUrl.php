@@ -45,7 +45,7 @@ class SpecialShortUrl extends SpecialPage {
             return;
         }
 		// Wrong ID
-		$notfound = wfMsg ( 'shorturl-not-found', $id );
+		$notfound = Html::element( 'p', array(), wfMsg ( 'shorturl-not-found', $id ) );
 		$wgOut->addHTML( $notfound );
 	}
 }
